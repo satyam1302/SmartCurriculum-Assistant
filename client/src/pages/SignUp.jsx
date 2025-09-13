@@ -50,7 +50,8 @@ function SignUp() {
     }
 
     try {
-      const response = await axios.post('http://localhost:4001/api/auth/signup', {
+      // const response = await axios.post('http://localhost:4001/api/auth/signup', {
+      const response = await axios.post('https://smartcurriculum-assistant-backend.onrender.com/api/auth/signup', {
         name: formData.name,
         email: formData.email,
         password: formData.password,
