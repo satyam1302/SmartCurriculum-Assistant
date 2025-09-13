@@ -54,7 +54,9 @@ function Dashboard() {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.post(`http://localhost:4001/api/ai/${contentType}`, formData);
+      // const response = await axios.post(`http://localhost:4001/api/ai/${contentType}`, formData);
+      const response = await axios.post(`https://smartcurriculum-assistant-backend.onrender.com/api/ai/${contentType}`, formData);
+
       setGeneratedContent(response.data.content);
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to generate content');
