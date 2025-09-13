@@ -23,7 +23,8 @@ const theme = createTheme({
 });
 
 // Add axios default config
-axios.defaults.baseURL = 'http://localhost:4001';
+// axios.defaults.baseURL = 'http://localhost:4001';
+axios.defaults.baseURL = 'https://smartcurriculum-assistant-backend.onrender.com';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
