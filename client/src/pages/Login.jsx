@@ -40,7 +40,8 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4001/api/auth/login', formData);
+      // const response = await axios.post('http://localhost:4001/api/auth/login', formData);
+      const response = await axios.post('https://smartcurriculum-assistant-backend.onrender.com/api/auth/login', formData);
       localStorage.setItem('token', response.data.token);
       window.location.href = '/dashboard';
     } catch (err) {
